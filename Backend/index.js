@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const pinRoute = require("./routes/pinsRoute");
+const userRoute = require("./routes/userRoute");
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ mongoose
  .catch(err => console.log(err));
 
  app.use(`/api/pins`, pinRoute);
+ app.use(`/api/users`, userRoute);
  
   
 
